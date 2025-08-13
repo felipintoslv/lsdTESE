@@ -1,0 +1,388 @@
+\newcommand{\lsd}[1] {\textit{#1}}
+\section{Values relevants to initialize}
+\begin{longtable}{||p{3cm}|p{10cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\end{longtable}
+
+\section{Elements relevants to observe}
+\begin{longtable}{||p{3cm}|p{10cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\end{longtable}
+
+\section{List of all elements}
+\subsection{Object \textbf{Root}}
+
+Description: (no description available)
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\end{longtable}
+
+\subsection{Object \textbf{Market}}
+
+Description: 'Market' appears in the equation for: (Never Used).
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{LandPrice} &\textbf{Type: } Parameter
+ 
+'LandPrice' appears in the equation for: ComputeValueNewMill, Decide. \\ \hline 
+\lsd{LearningFactor} &\textbf{Type: } Parameter
+ 
+'LearningFactor' appears in the equation for: ProductionKg. \\ \hline 
+\lsd{PerceptionVar} &\textbf{Type: } Parameter
+ 
+'PerceptionVar' appears in the equation for: PerceivedProdKg. \\ \hline 
+\lsd{Price} &\textbf{Type: } Variable, 20 lags 
+ 
+ 'Price' appears in the equation for: CashFlow, ExpectedPrice. \\ \hline 
+\lsd{RenovationCosts} &\textbf{Type: } Parameter
+ 
+'RenovationCosts' appears in the equation for: ComputeValueNewMill, ComputeValueSC, Decide. \\ \hline 
+\lsd{SCGrowth} &\textbf{Type: } Parameter
+ 
+'SCGrowth' appears in the equation for: SCPotential. \\ \hline 
+\lsd{SCReduction} &\textbf{Type: } Parameter
+ 
+'SCReduction' appears in the equation for: SCProduction. \\ \hline 
+\lsd{TotalProduction} &\textbf{Type: } Variable, 0 lags 
+ 
+ Sum of the total production, zero NewCapacity and Renovation (for new iteration) and check market shares
+
+'TotalProduction' appears in the equation for: PubKnowhow0, PubKnowhow1, Decide. \\ \hline 
+\lsd{AvKgProductivityS} &\textbf{Type: } Variable, 0 lags 
+ 
+ Calculate the average productivity of capital goods on supply
+
+'AvKgProductivityS' appears in the equation for: MinimumProductivity. \\ \hline 
+\lsd{AvSCPotential} &\textbf{Type: } Variable, 0 lags 
+ 
+ Calculate the average SCPotential
+
+'AvSCPotential' appears in the equation for: ComputeValueNewMill, Decide. \\ \hline 
+\lsd{ComputeValueNewMill} &\textbf{Type: } Function, 0 lags 
+ 
+Compute the scrapping value of buinding a new mill for the owner that called it
+
+'ComputeValueNewMill' appears in the equation for: Decide. \\ \hline 
+\lsd{ComputeValueKg} &\textbf{Type: } Function, 0 lags 
+ 
+Compute the scrapping value of buying new capital good for the mill that called it. Should allways be called by a Mill
+
+'ComputeValueKg' appears in the equation for: Decide. \\ \hline 
+\lsd{ComputeValueSC} &\textbf{Type: } Function, 0 lags 
+ 
+Compute the scrapping value of renovating the sugar cane area that called it. Should always be called by a SC
+
+'ComputeValueSC' appears in the equation for: Decide. \\ \hline 
+\lsd{ms0Sucrose} &\textbf{Type: } Parameter
+ 
+'ms0Sucrose' appears in the equation for: TotalProduction, PubKnowhow0. \\ \hline 
+\lsd{ms1Sucrose} &\textbf{Type: } Parameter
+ 
+'ms1Sucrose' appears in the equation for: TotalProduction, PubKnowhow1. \\ \hline 
+\lsd{ProductivityKgSBase} &\textbf{Type: } Variable, 0 lags 
+ 
+ Basic growth of productivity of capital good available to new investment
+
+'ProductivityKgSBase' appears in the equation for: ProductivityKgS. \\ \hline 
+\lsd{AvKnowhow0} &\textbf{Type: } Parameter
+ 
+'AvKnowhow0' appears in the equation for: TotalProduction, PubKnowhow0. \\ \hline 
+\lsd{AvKnowhow1} &\textbf{Type: } Parameter
+ 
+'AvKnowhow1' appears in the equation for: TotalProduction, PubKnowhow1. \\ \hline 
+\lsd{PubKnowhow0} &\textbf{Type: } Variable, 1 lags 
+ 
+ Public know-how for technology 0
+Represents the spilling of private know-how into public know-how
+
+'PubKnowhow0' appears in the equation for: PubKnowhow0, ComputeValueNewMill, Decide, SCExcess. \\ \hline 
+\lsd{PubKnowhow1} &\textbf{Type: } Variable, 1 lags 
+ 
+ Public know-how for technology 1
+Represents the spilling of private know-how into public know-how
+
+'PubKnowhow1' appears in the equation for: PubKnowhow1, ComputeValueNewMill, Decide, SCExcess, ProductionKg. \\ \hline 
+\lsd{KnowhowLeak} &\textbf{Type: } Parameter
+ 
+'KnowhowLeak' appears in the equation for: PubKnowhow0, PubKnowhow1. \\ \hline 
+\lsd{CostFixMin} &\textbf{Type: } Parameter
+ 
+'CostFixMin' appears in the equation for: Decide. \\ \hline 
+\lsd{CostFixMax} &\textbf{Type: } Parameter
+ 
+'CostFixMax' appears in the equation for: Decide. \\ \hline 
+\lsd{CostVarAgricMin} &\textbf{Type: } Parameter
+ 
+'CostVarAgricMin' appears in the equation for: Decide. \\ \hline 
+\lsd{CostVarAgricMax} &\textbf{Type: } Parameter
+ 
+'CostVarAgricMax' appears in the equation for: Decide. \\ \hline 
+\lsd{ScrappingValue} &\textbf{Type: } Parameter
+ 
+'ScrappingValue' appears in the equation for: Decide. 
+ 
+ \textbf{Initial values:}  All 135 instances set to random values drawn from a uniform in the range [0.15,0.35]. \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{Owner}}
+
+Description: 'Owner' appears in the equation for: TotalProduction, AvSCPotential.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{CashOwner} &\textbf{Type: } Parameter
+ 
+'CashOwner' appears in the equation for: CashFlow, Decide. 
+ 
+ \textbf{Initial values:}  All 135 instances equal to 50000. \\ \hline 
+\lsd{SCOwner} &\textbf{Type: } Variable, 0 lags 
+ 
+ Sum the total production of sugar-cane under one owner
+
+'SCOwner' appears in the equation for: (Never Used). \\ \hline 
+\lsd{ProductionOwner} &\textbf{Type: } Variable, 0 lags 
+ 
+ Sum of the production under the owner
+
+'ProductionOwner' appears in the equation for: TotalProduction, CashFlow. \\ \hline 
+\lsd{CashFlow} &\textbf{Type: } Variable, 0 lags 
+ 
+ Manage cash flow
+Production is sold, costs are paid and all revenue is centralized at the owner and investments are decided
+Returns total income minus cost under the owner
+
+'CashFlow' appears in the equation for: (Never Used). \\ \hline 
+\lsd{ExpectedPrice} &\textbf{Type: } Variable, 0 lags 
+ 
+ Price the owner expects to receive for production
+
+'ExpectedPrice' appears in the equation for: ComputeValueNewMill, ComputeValueKg, ComputeValueSC, Decide. \\ \hline 
+\lsd{Decide} &\textbf{Type: } Function, 0 lags 
+ 
+Select the best investment option available and implement it. Return the kind of option chosen: 1 for sugar cane renovation, 2 for investment in existing mill (buy capital good), 3 for create new mill and -1 when no available options are good enough (scrapping value below minimum limit) or not affordable for the owner
+
+'Decide' appears in the equation for: CashFlow. \\ \hline 
+\lsd{TypeOwner} &\textbf{Type: } Variable, 0 lags 
+ 
+ (no description available) \\ \hline 
+\lsd{NumberMills} &\textbf{Type: } Variable, 0 lags 
+ 
+ (no description available) \\ \hline 
+\lsd{ms0SucroseOwner} &\textbf{Type: } Parameter
+ 
+(no description available) \\ \hline 
+\lsd{ms1SucroseOwner} &\textbf{Type: } Parameter
+ 
+(no description available) \\ \hline 
+\lsd{AvKnowhow0Owner} &\textbf{Type: } Parameter
+ 
+(no description available) \\ \hline 
+\lsd{AvKnowhow1Owner} &\textbf{Type: } Parameter
+ 
+(no description available) \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{Mill}}
+
+Description: 'Mill' appears in the equation for: TotalProduction, AvSCPotential, CashFlow, Decide.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{Knowhow0} &\textbf{Type: } Parameter
+ 
+'Knowhow0' appears in the equation for: TotalProduction, ComputeValueKg, Decide, SCExcess, PerceivedProdKg, ProductionKg. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 0.6. \\ \hline 
+\lsd{Knowhow1} &\textbf{Type: } Parameter
+ 
+'Knowhow1' appears in the equation for: TotalProduction, ComputeValueKg, Decide, SCExcess, PerceivedProdKg, ProductionKg. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 0.6. \\ \hline 
+\lsd{NewCapacity} &\textbf{Type: } Parameter
+ 
+'NewCapacity' appears in the equation for: TotalProduction, ComputeValueKg, Decide. \\ \hline 
+\lsd{SCMill} &\textbf{Type: } Variable, 0 lags 
+ 
+ Sum of all sugar-cane production under the mill
+
+'SCMill' appears in the equation for: SCOwner, CashFlow, SCExcess, AvKgProductivity, ProductionKg. \\ \hline 
+\lsd{MinimumProductivity} &\textbf{Type: } Variable, 0 lags 
+ 
+ Minimum accepted productivity for a capital good to be used
+
+'MinimumProductivity' appears in the equation for: SCExcess. \\ \hline 
+\lsd{SCExcess} &\textbf{Type: } Variable, 0 lags 
+ 
+ Amount of sugar-cane not processed
+Is influenced by sugar-cane production and capacity of capital goods
+Rank capital goods by productivity and supply them with sugar-cane imput (write SCImput). Control for disposal of old capital goods
+
+'SCExcess' appears in the equation for: ComputeValueKg, ProductionMill. \\ \hline 
+\lsd{ProductionMill} &\textbf{Type: } Variable, 0 lags 
+ 
+ Summ of all capital goods productions under the mill
+
+'ProductionMill' appears in the equation for: ProductionOwner, AvKgProductivity. \\ \hline 
+\lsd{AvKgProductivity} &\textbf{Type: } Variable, 0 lags 
+ 
+ Average productivity of all capital good under the mill
+Is influenced by the productivity of capital goods
+
+'AvKgProductivity' appears in the equation for: ComputeValueSC. \\ \hline 
+\lsd{AvCostVarInd} &\textbf{Type: } Variable, 0 lags 
+ 
+ Average variable cost of all capital good under the mill
+
+'AvCostVarInd' appears in the equation for: ComputeValueSC. \\ \hline 
+\lsd{CostFix} &\textbf{Type: } Parameter
+ 
+'CostFix' appears in the equation for: CashFlow, Decide. 
+ 
+ \textbf{Initial values:}  All 300 instances set to random values drawn from a uniform in the range [18900,22500]. \\ \hline 
+\lsd{CostVarAgric} &\textbf{Type: } Parameter
+ 
+'CostVarAgric' appears in the equation for: ComputeValueNewMill, ComputeValueKg, ComputeValueSC, CashFlow, Decide. 
+ 
+ \textbf{Initial values:}  All 300 instances set to random values drawn from a uniform in the range [30,40]. \\ \hline 
+\lsd{MinProdMult} &\textbf{Type: } Parameter
+ 
+'MinProdMult' appears in the equation for: MinimumProductivity. 
+ 
+ \textbf{Initial values:}  All 300 instances set to random values drawn from a uniform in the range [0.9,0.95]. \\ \hline 
+\lsd{NewMill} &\textbf{Type: } Parameter
+ 
+(no description available) 
+ 
+ \textbf{Initial values:}  All 300 instances equal to 0. \\ \hline 
+\lsd{TypeMill} &\textbf{Type: } Variable, 0 lags 
+ 
+ (no description available) \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{SC}}
+
+Description: 'SC' appears in the equation for: TotalProduction, AvSCPotential, Decide.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{Renovation} &\textbf{Type: } Parameter
+ 
+'Renovation' appears in the equation for: TotalProduction, Decide, SCProduction. \\ \hline 
+\lsd{SCPotential} &\textbf{Type: } Variable, 1 lags 
+ 
+ Potential production of sugar-cane of the mill
+Is influenced by the area and by agricultural productivity
+Grows exponetilly over time, representing agricultural productivity advances
+
+'SCPotential' appears in the equation for: AvSCPotential, ComputeValueSC, Decide, SCPotential, SCProduction. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 1500. \\ \hline 
+\lsd{SCProduction} &\textbf{Type: } Variable, 1 lags 
+ 
+ Actual production of sugar-cane of the mill
+Is influenced by area, agricultural productivity, sugar-cane productivity loss over the harvests and by investiments in renovation
+Falls over time. When renovation is made, increases to equal SCPotential
+
+'SCProduction' appears in the equation for: ComputeValueSC, Decide, SCMill, SCProduction. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 1500. \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{Kg}}
+
+Description: 'Kg' appears in the equation for: TotalProduction, CashFlow, Decide, SCExcess, AvCostVarInd.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{CapacityKg} &\textbf{Type: } Parameter
+ 
+'CapacityKg' appears in the equation for: Decide, SCExcess, ProductionKg. \\ \hline 
+\lsd{ProductivityKg} &\textbf{Type: } Parameter
+ 
+'ProductivityKg' appears in the equation for: Decide, SCExcess, PerceivedProdKg, ProductionKg. \\ \hline 
+\lsd{SCImput} &\textbf{Type: } Parameter
+ 
+'SCImput' appears in the equation for: Decide, SCExcess, ProductionKg. \\ \hline 
+\lsd{TypeKg} &\textbf{Type: } Parameter
+ 
+'TypeKg' appears in the equation for: TotalProduction, Decide, PerceivedProdKg, ProductionKg. \\ \hline 
+\lsd{PerceivedProdKg} &\textbf{Type: } Variable, 0 lags 
+ 
+ Productivity of the capital good as perceived by the owner
+Is influenced by the actual productivity of the capital good, the know-how in the mill and some mistake in perception
+
+'PerceivedProdKg' appears in the equation for: SCExcess. \\ \hline 
+\lsd{ProductionKg} &\textbf{Type: } Variable, 0 lags 
+ 
+ Sacarose extracted from sugar-cane
+Is influenced by productivity, know-how and imput
+First, it absorbs public know-how
+After production, proportional to usage, increases know-how for its type
+
+'ProductionKg' appears in the equation for: TotalProduction, CashFlow, ProductionMill. \\ \hline 
+\lsd{CostVarInd} &\textbf{Type: } Parameter
+ 
+'CostVarInd' appears in the equation for: CashFlow, Decide, AvCostVarInd. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 0.05. \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{KSupplier}}
+
+Description: 'KSupplier' appears in the equation for: AvKgProductivityS, ComputeValueNewMill, ComputeValueKg.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{ProdGrowth} &\textbf{Type: } Parameter
+ 
+'ProdGrowth' appears in the equation for: ProductivityKgSBase. \\ \hline 
+\end{longtable}
+
+\subsection{Object \textbf{Technology}}
+
+Description: 'Technology' appears in the equation for: AvKgProductivityS, ComputeValueNewMill, ComputeValueKg.
+
+
+\begin{longtable}{||p{3cm}|p{11cm}||}
+  \hline
+  \textbf{Label} & \textbf{Description} \\  \hline \endhead 
+\lsd{CapacityKgS} &\textbf{Type: } Parameter
+ 
+'CapacityKgS' appears in the equation for: ComputeValueNewMill, ComputeValueKg, Decide. \\ \hline 
+\lsd{PriceKgS} &\textbf{Type: } Parameter
+ 
+'PriceKgS' appears in the equation for: ComputeValueNewMill, ComputeValueKg, Decide. \\ \hline 
+\lsd{TypeKgS} &\textbf{Type: } Parameter
+ 
+'TypeKgS' appears in the equation for: ComputeValueNewMill, ComputeValueKg, Decide. \\ \hline 
+\lsd{ProductivityKgS} &\textbf{Type: } Variable, 1 lags 
+ 
+ Productivity of capital good available to new investment
+Grows over time according to ProductivityKgSBase
+
+'ProductivityKgS' appears in the equation for: AvKgProductivityS, ComputeValueNewMill, ComputeValueKg, Decide, ProductivityKgS. \\ \hline 
+\lsd{CostVarIndS} &\textbf{Type: } Parameter
+ 
+'CostVarIndS' appears in the equation for: ComputeValueNewMill, ComputeValueKg, Decide. 
+ 
+ \textbf{Initial values:}  All 4 instances equal to 0.05. \\ \hline 
+\end{longtable}
+
